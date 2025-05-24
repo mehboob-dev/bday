@@ -1,16 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Happy birthday</title>
-  </head>
-  <body>
-    <!-- Tiktok meowish -->
-    <canvas id="c"></canvas>
-
-    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A heartfelt birthday celebration for my beloved Farhana">
+    <title>Happy Birthday, Farhana!</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+    <!-- Firework and Balloon Animation (First Section) -->
+    <section class="animation-section">
+        <canvas id="c"></canvas>
+    </section>
+    <!-- Particle Background -->
+    <canvas id="particle-canvas"></canvas>
+    <div class="parallax-bg"></div>
+    <div class="overlay"></div>
+    <header class="header">
+        <p>A celebration of you, my love, crafted with all my heart</p>
+    </header>
+    <section class="countdown">
+        <h2>Counting Down to Your Special Day</h2>
+        <div id="timer">
+            <div><span id="days">0</span> Days</div>
+            <div><span id="hours">0</span> Hours</div>
+            <div><span id="minutes">0</span> Minutes</div>
+            <div><span id="seconds">0</span> Seconds</div>
+        </div>
+    </section>
+    <section class="message">
+        <h2>A Message from My Heart</h2>
+        <p class="animated-text" id="message-text">
+            My dearest Farhana, you are the light of my life. Every moment with you is a treasure, and today we celebrate the incredible person you are. Here's to a lifetime of love, laughter, and endless joy together. Happy Birthday, my forever love!
+        </p>
+    </section>
+    <footer>
+        <p>Built with 💖 by Your Loving Fiancé | © 2025</p>
+    </footer>
     <script src="script.js"></script>
-  </body>
+</body>
 </html>

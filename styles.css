@@ -1,0 +1,192 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    color: #fff;
+    background: linear-gradient(135deg, #2b0a3d 0%, #4b1a6b 100%);
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Animation Section (Firework and Balloon) */
+.animation-section {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height for prominence */
+    z-index: 5;
+}
+
+#c {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 6;
+}
+
+/* Particle Canvas */
+#particle-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Parallax Background */
+.parallax-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('heart-pattern.png') repeat;
+    background-size: 150px;
+    opacity: 0.05;
+    z-index: 2;
+    transform: translateZ(0);
+}
+
+/* Overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 3;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    padding: 2rem;
+    position: relative;
+    z-index: 4;
+    animation: fadeInDown 2s ease-out;
+}
+
+.header p {
+    font-size: 1.4rem;
+    color: #f0c4e3;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Countdown */
+.countdown {
+    text-align: center;
+    padding: 3rem 2rem;
+    position: relative;
+    z-index: 4;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    margin: 2rem auto;
+    max-width: 900px; /* Match message section width */
+    backdrop-filter: blur(5px);
+}
+
+.countdown h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #f0c4e3;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+#timer {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    font-size: 1.8rem;
+}
+
+#timer div {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#timer div:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+#timer span {
+    font-weight: bold;
+    color: #ff6f91;
+}
+
+/* Message */
+.message {
+    text-align: center;
+    padding: 3rem 2rem;
+    position: relative;
+    z-index: 4;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.message h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #f0c4e3;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.animated-text {
+    font-size: 1.4rem;
+    line-height: 1.8;
+    opacity: 0;
+    animation: fadeInUp 2s ease-out forwards;
+    animation-delay: 0.5s;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 12px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: #2b0a3d;
+    color: #f0c4e3;
+    position: relative;
+    z-index: 4;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header p { font-size: 1.2rem; }
+    .countdown h2, .message h2 { font-size: 2rem; }
+    #timer { flex-wrap: wrap; gap: 1rem; font-size: 1.4rem; }
+    .animated-text { font-size: 1.2rem; }
+}
+
+@media (max-width: 480px) {
+    .header { padding: 1rem; }
+    .countdown, .message { padding: 2rem 1rem; }
+    #timer div { padding: 1rem; }
+}
